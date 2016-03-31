@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/jquery.barrating.min.js"></script>
+	<script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+	<script src="js/chosen.jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/custom.js"></script>
+</head>
+<body>
+	<div class="layout-body">
+		<div class="layout-wrapper">
+			<header class="layout-header">
+				<div class="header-top">
+					<div class="content-center">
+						<div class="header-top-content">
+							<div class="header-top-content-box left">
+								<div class="header-top-content_time">Пн-Пт 9:55 до 19:05</div>
+								<div class="header-top-content_langs animated">
+									<div class="header-top-content_langs-current">Рус</div>
+									<div class="header-top-content_langs-drop">
+										<a class="header-top-content_langs-drop-link" href="#">Eng</a>
+										<a class="header-top-content_langs-drop-link" href="#">Укр</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-top-content-box right">
+								<div class="header-top-content_login-reg js-login-reg">
+									<div class="header-top-content_login-reg-button js-login-reg-but">Вход / Регистрация</div>
+									<div class="header-top-content_login-reg-popup animated fadeIn js-login-reg-popup">
+										<div class="header-top-content_login-reg-popup_title">Вход в интернет-магазин</div>
+										<div class="header-top-content_login-reg-popup-content box-row space-between align-end">
+											<form class="header-top-content_login-reg-popup-content-form">
+												<input class="header-top-content_login-reg-popup-content-form_text input-text" type="email" placeholder="Ваш E-mail">
+												<input class="header-top-content_login-reg-popup-content-form_text input-text" type="password" placeholder="Пароль">
+												<div class="header-top-content_login-reg-popup-content-form-not-login">
+													<a class="header-top-content_login-reg-popup-content-form-not-login_link" href="#">Не удалось войти</a>
+												</div>
+												<div class="header-top-content_login-reg-popup-content-form-save">
+													<input class="header-top-content_login-reg-popup-content-form-save_check" type="checkbox" id="login-save">
+													<label class="header-top-content_login-reg-popup-content-form-save_label box-row align-center" for="login-save">
+														<span class="header-top-content_login-reg-popup-content-form-save_label-icon box-row space-center align-center">
+															<i class="header-top-content_login-reg-popup-content-form-save_label-icon-check sprite-icon-checkbox-login"></i>
+														</span>
+														Запомнить меня
+													</label>
+												</div>
+												<input class="header-top-content_login-reg-popup-content-form_submit yellow-button" type="submit" value="Войти">
+											</form>
+											<div class="header-top-content_login-reg-popup-content-links box-col space-between">
+												<div class="box-col">
+													<div class="header-top-content_login-reg-popup-content-links_title">
+														или войдите с помощью
+													</div>
+													<a class="header-top-content_login-reg-popup-content-links_link fb box-row align-center" href="#">
+														<i class="sprite-icon-facebook"></i>
+														Войти с помощью Facebook
+													</a>
+													<a class="header-top-content_login-reg-popup-content-links_link vk box-row align-center" href="#">
+														<i class="sprite-icon-vk"></i>
+														Войти с помощью Вконтакте
+													</a>
+												</div>
+												<a class="header-top-content_login-reg-popup-content-links_reg self-center" href="#">Зарегистрироваться</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-middle">
+					<div class="content-center">
+						<div class="header-middle-content">
+							<a class="header-middle_link" href=""><img src="img/logo.png" alt=""></a>
+							<div class="header-middle_search">
+								<div class="header-middle_search-cats">
+									<div class="header-middle_search-cats-button">Везде</div>
+									<div class="header-middle_search-cats-dropdown animated fadeIn">
+										<div class="header-middle_search-cats-dropdown_item">Кухня</div>
+										<div class="header-middle_search-cats-dropdown_item">Гостинная</div>
+										<div class="header-middle_search-cats-dropdown_item">Спальня</div>
+										<div class="header-middle_search-cats-dropdown_item">Детская</div>
+										<div class="header-middle_search-cats-dropdown_item">Офис</div>
+										<div class="header-middle_search-cats-dropdown_item">Дача</div>
+									</div>
+								</div>
+								<form class="header-middle_search-form" action="#">
+									<input class="header-middle_search-form_field input-text" type="text" placeholder="Найти...">
+									<input class="header-middle_search-form_button" type="submit" value="">
+								</form>
+							</div>
+							<div class="header-middle_tels js-tels-box">
+								<i class="header-middle_tels-icon"></i>
+								<div class="header-middle_tels-box">
+									<div class="header-middle_tels-num js-tels-but">(044) 123-45-67</div>
+									<a href="#" class="header-middle_tels-link">Перезвонить мне</a>
+								</div>
+								<i class="header-middle_tels-arrow box-row space-center align-center js-tels-but"></i>
+								<div class="header-middle_tels-dropdown animated fadeIn js-tels-popup">
+									<div class="header-middle_tels-dropdown-num num-1">(068) 875 73 49</div>
+									<div class="header-middle_tels-dropdown-num num-2">(093) 875 73 49</div>
+									<div class="header-middle_tels-dropdown-num num-3">(050) 875 73 49</div>
+								</div>
+							</div>
+							<nav class="header-middle_menu">
+								<a href="#" class="header-middle_menu-link link-1">Идеи</a>
+								<i class="header-middle_menu-border"></i>
+								<a href="#" class="header-middle_menu-link link-2">Избранное</a>
+								<i class="header-middle_menu-border"></i>
+								<a href="#" class="header-middle_menu-link link-3">Сравнить</a>
+								<i class="header-middle_menu-border"></i>
+								<a href="#" class="header-middle_menu-link link-4">Корзина
+									<span class="header-middle_menu-cart-count">14</span>
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="content-center">
+						<div class="header-bottom-content">
+							<div class="header-bottom_category-menu">
+								<div class="header-bottom_category-menu-button">
+									<i class="header-bottom_category-menu-button_icon"></i>
+									<div class="header-bottom_category-menu-button_text">
+										<div class="header-bottom_category-menu-button_text-1">полный</div>
+										<div class="header-bottom_category-menu-button_text-2">каталог товаров</div>
+									</div>
+								</div>
+								<nav class="header-bottom_category-menu-dropdown animated fadeIn">
+									<a class="header-bottom_category-menu-dropdown_link link-1" href="#">Кухня</a>
+									<a class="header-bottom_category-menu-dropdown_link link-2" href="#">Гостинная</a>
+									<a class="header-bottom_category-menu-dropdown_link link-3" href="#">Спальня</a>
+									<a class="header-bottom_category-menu-dropdown_link link-4" href="#">Детская</a>
+									<a class="header-bottom_category-menu-dropdown_link link-5" href="#">Офис</a>
+									<a class="header-bottom_category-menu-dropdown_link link-6" href="#">Дача</a>
+								</nav>
+							</div>
+							<div class="header-bottom_sections-menu">
+								<div class="header-bottom_sections-menu_label">Популярные разделы</div>
+								<nav class="header-bottom_sections-menu-links">
+									<a class="header-bottom_sections-menu-links_link" href="#">Для кухни</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">Игрушки</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">Мебель</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">Домашний текстиль</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">Интерьер</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">Для ванной</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">
+										<span class="header-bottom_sections-menu-links_link-new">new</span>
+										Освещение
+									</a>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<section class="layout-content">
+				<div class="content-center">
+					<div class="breadcrumbs">
+						<div class="breadcrumbs-content">
+							<a class="breadcrumbs_link" href="#">hatta</a> /
+							<span class="breadcrumbs_current">Каталог товаров</span>	
+						</div>
+					</div>
+					<div class="sections-top-banner">
+						<img src="img/temp/sections-banner.jpg" alt="">
+					</div>
+					<div class="catalog-content">
+						<section class="catalog-content-main">
+							<div class="sections-top-title box-row align-center">
+								<h1 class="page-title">Барные стулья</h1>
+							</div>
+							<div class="sections-sort">
+								<div class="sections-sort_title">По материалу</div>
+								<div class="sections-sort-products box-row">
+									<a class="sections-sort-products-link" href="#">
+										<span class="sections-sort-products-link-content box-col align-center space-between">
+											<span class="sections-sort-products-link_img box-row space-center align-center">
+												<img src="img/temp/section-sort-1.jpg" alt="">
+											</span>
+											<span class="sections-sort-products-link_title">Деревянные барные стулья</span>
+										</span>
+									</a>
+									<a class="sections-sort-products-link" href="#">
+										<span class="sections-sort-products-link-content box-col align-center space-between">
+											<span class="sections-sort-products-link_img box-row space-center align-center">
+												<img src="img/temp/section-sort-2.jpg" alt="">
+											</span>
+											<span class="sections-sort-products-link_title">ПЛастиковые барные стулья</span>
+										</span>
+									</a>
+									<a class="sections-sort-products-link" href="#">
+										<span class="sections-sort-products-link-content box-col align-center space-between">
+											<span class="sections-sort-products-link_img box-row space-center align-center">
+												<img src="img/temp/section-sort-3.jpg" alt="">
+											</span>
+											<span class="sections-sort-products-link_title">металлические барные стулья</span>
+										</span>
+									</a>
+								</div>
+								<div class="sections-sort-view-all box-row space-end">
+									<a class="sections-sort-view-all_link animated box-row align-center" href="#">
+										<i class="sprite-icon-section-menu-arrow"></i>
+										Все барные стулья
+									</a>
+								</div>
+							</div>
+							<div class="sections-sort">
+								<div class="sections-sort_title">По высоте</div>
+								<div class="sections-sort-products box-row">
+									<a class="sections-sort-products-link" href="#">
+										<span class="sections-sort-products-link-content box-col align-center space-between">
+											<span class="sections-sort-products-link_img box-row space-center align-center">
+												<img src="img/temp/section-sort-4.jpg" alt="">
+											</span>
+											<span class="sections-sort-products-link_title">высокие барные стулья</span>
+										</span>
+									</a>
+									<a class="sections-sort-products-link" href="#">
+										<span class="sections-sort-products-link-content box-col align-center space-between">
+											<span class="sections-sort-products-link_img box-row space-center align-center">
+												<img src="img/temp/section-sort-5.jpg" alt="">
+											</span>
+											<span class="sections-sort-products-link_title">стандартные барные стулья</span>
+										</span>
+									</a>
+									<a class="sections-sort-products-link" href="#">
+										<span class="sections-sort-products-link-content box-col align-center space-between">
+											<span class="sections-sort-products-link_img box-row space-center align-center">
+												<img src="img/temp/section-sort-6.jpg" alt="">
+											</span>
+											<span class="sections-sort-products-link_title">полубарные стулья</span>
+										</span>
+									</a>
+								</div>
+								<div class="sections-sort-view-all box-row space-end">
+									<a class="sections-sort-view-all_link animated box-row align-center" href="#">
+										<i class="sprite-icon-section-menu-arrow"></i>
+										Все барные стулья
+									</a>
+								</div>
+							</div>
+							<div class="brand-sort">
+								<div class="sections-sort_title">По бредну</div>
+								<div class="brand-sort-brands box-row box-wrap">
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-1.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-2.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-3.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-4.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-5.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-6.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-1.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-2.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-3.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-4.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-5.jpg" alt="">
+										</span>
+									</a>
+									<a href="#" class="brand-sort-brands-link">
+										<span class="brand-sort-brands-link-content box-row space-center align-center">
+											<img src="img/temp/brand-6.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="sections-sort-view-all box-row space-end">
+									<a class="sections-sort-view-all_link animated box-row align-center" href="#">
+										<i class="sprite-icon-section-menu-arrow"></i>
+										Все барные стулья
+									</a>
+								</div>
+							</div>
+						</section>
+						<aside class="catalog-content-sidebar">
+							<div class="catalog-content-sidebar-filters sections-filters">
+								<div class="catalog-content-sidebar-filters_panel">
+									<div class="catalog-content-sidebar-filters_title">Кухня</div>
+									<div class="catalog-content-sidebar-filters-list animated fadeIn">
+										<a href="#" class="catalog-content-sidebar-filters-list_link active">Барные стулья</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">Стулья кухонные</a>
+									</div>
+								</div>
+								<div class="catalog-content-sidebar-filters_panel">
+									<div class="catalog-content-sidebar-filters_title">Производитель</div>
+									<div class="catalog-content-sidebar-filters-list animated fadeIn">
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											AMF
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Garden4You
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Grand Soleil
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Home4You
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Papatya
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Special4You
+										</a>
+									</div>
+								</div>
+								<div class="catalog-content-sidebar-filters_panel">
+									<div class="catalog-content-sidebar-filters_title">Материал</div>
+									<div class="catalog-content-sidebar-filters-list animated fadeIn">
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Кожа
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Кожзам
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Отсутствует
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Home4You 
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Пластик 
+										</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">
+											Ткань
+										</a>
+									</div>
+								</div>
+								<div class="catalog-content-sidebar-filters_panel">
+									<div class="catalog-content-sidebar-filters_title">Цена</div>
+									<div class="catalog-content-sidebar-filters-list animated fadeIn">
+										<a href="#" class="catalog-content-sidebar-filters-list_link">До 5 999 грн.</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">6 000 грн. — 8 999 грн.</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">9 000 грн. — 11 999 грн.</a>
+										<a href="#" class="catalog-content-sidebar-filters-list_link">От 12 000 грн. </a>
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="layout-footer">
+			<div class="content-center">
+				<div class="footer-content box-row space-between">
+					<div class="footer-content-left box-col space-between">
+						<nav class="footer-content-nav box-row space-between">
+							<a class="footer-content-nav_link" href="#">Как сделать заказ</a>
+							<a class="footer-content-nav_link" href="#">Доставка и оплата</a>
+							<a class="footer-content-nav_link" href="#">Блог</a>
+							<a class="footer-content-nav_link" href="#">Сотрудничество с нами</a>
+							<a class="footer-content-nav_link" href="#">Контакты</a>
+						</nav>
+						<div class="footer-content-subs">
+							<div class="footer-content-subs_title">Следить за новинками и акциями</div>
+							<form action="#" class="box-row">
+								<input class="footer-content-subs_email" type="email" placeholder="Введите Ваш Email">
+								<input class="footer-content-subs_submit sprite-icon-subs-submit" type="submit" value="">
+							</form>
+						</div>
+						<div class="footer-content_copy">Copyright Notice © 2010-2015 Companyname.com. All rights reserved</div>
+					</div>
+					<div class="footer-content-right">
+						<div class="footer-content-tels box-row space-between">
+							<div class="footer-content-tels-time">
+								<div class="footer-content-tels-time_label">звоните нам</div>
+								<div class="footer-content-tels-time_text">Пн-Пт 9:55 до 19:05</div>
+							</div>
+							<div class="footer-content-tels-nums">
+								<div class="footer-content-tels-nums_num">(044) 123-45-67</div>
+								<div class="footer-content-tels-nums_num">(067) 123-45-67</div>
+							</div>
+						</div>
+						<div class="footer-content-mail box-row space-between align-center">
+							<div class="footer-content-mail_label">пишите нам</div>
+							<a href="mailto:info@hatta.com.ua" class="footer-content-mail_link">info@hatta.com.ua</a>
+						</div>
+						<div class="footer-content-socials box-row space-end align-center">
+							<a target="_blank" href="#" class="footer-content-socials_link sprite-icon-social-fb"></a>
+							<a target="_blank" href="#" class="footer-content-socials_link sprite-icon-social-vk"></a>
+							<a target="_blank" href="#" class="footer-content-socials_link sprite-icon-social-inst"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

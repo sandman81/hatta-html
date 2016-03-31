@@ -1,0 +1,55 @@
+.chosen-container
+    position absolute
+    user-select none
+    z-index 5
+    width 100%
+    &.chosen-with-drop
+        box-shadow 3px 3px 7px rgba(black, 0.35)
+
+.chosen-single
+    width 100%
+    display flex
+    justify-content space-between
+    align-items center
+    text-decoration none
+    box-sizing border-box
+    height 30px
+    background white
+    color grayColor
+    font-size 12px
+    padding 0 10px 0 13px
+    cursor pointer
+    border 1px solid grayBorder
+    div
+        width 0
+        height 0
+        border-style solid
+        border-width 4px 4px 0 4px
+        border-color grayColor transparent transparent transparent
+
+.chosen-drop
+    font-size 12px
+    color grayColor
+    background white
+    border 1px solid grayBorder
+    border-top none
+    transition all 0.2s ease
+    opacity 0
+    visibility hidden
+    height 0
+    .chosen-container.chosen-with-drop &
+        opacity 1
+        visibility visible
+        height auto
+    .chosen-search
+        display none
+    .chosen-results
+        list-style none
+        li
+            cursor pointer
+            display flex
+            height 28px
+            align-items center
+            padding-left 13px
+            &:not(:last-child)
+                border-bottom 1px solid grayBorder

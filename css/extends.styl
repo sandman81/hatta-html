@@ -1,0 +1,139 @@
+//placeholder
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+
+//inpit text
+
+.input-text
+    height 30px
+    width 100%
+    border 1px solid grayBorder
+    padding 0 9px
+
+//titles
+
+.block-title
+  text-transform uppercase
+  font-size 16px
+  font-weight normal
+  color grayColor
+  font-family fontBold
+  margin-bottom 25px
+  @media screen and (max-width: 1200px)
+    margin-bottom 15px
+  span
+    font-family fontReg
+
+.block-title-border
+  text-transform uppercase
+  font-size 16px
+  font-weight normal
+  color grayColor
+  font-family fontBold
+  margin-bottom 25px
+  border-top 2px solid yellowColor
+  padding-top 15px
+  @media screen and (max-width: 1200px)
+    margin-bottom 15px
+  span
+    font-family fontReg
+
+
+//checkbox
+
+.input-checkbox
+  display none
+
+.checkbox-label
+  display inline-flex
+  position relative
+  cursor pointer
+  align-items flex-end
+  user-select none
+  background white
+  &:before
+    content ''
+    box-sizing border-box
+    flex 0 0 16px
+    height 16px
+    border 1px solid grayBorder
+    margin-right 7px
+    border-radius 2px
+  &:after
+    content ''
+    position absolute
+    left 1px
+    top 0
+    @extend .sprite-icon-checkbox
+    opacity 0
+    transition opacity 0.2s ease
+    .input-checkbox:checked + &
+      opacity 1
+
+//buttons
+
+.yellow-button
+  cursor pointer
+  height 30px
+  background yellowColor
+  border none
+  color black
+  font-size 14px
+
+//shadow
+
+.popup-shadow
+  box-shadow 3px 3px 7px rgba(black, 0.35)
+
+//flexbox
+
+.box-row,
+.box-col
+  display flex
+
+.box-row
+  flex-direction row
+
+.box-col
+  flex-direction column
+
+.box-wrap
+  flex-wrap wrap
+
+.space-between
+  justify-content space-between
+
+.space-center
+  justify-content center
+
+.space-end
+  justify-content flex-end  
+
+.space-start
+  justify-content flex-start  
+
+.align-center
+  align-items center
+
+.align-end
+  align-items flex-end
+
+.align-baseline
+  align-items baseline
+
+.self-center
+  align-self center
+
+.self-end
+  align-self flex-end
+
+.self-start
+  align-self flex-start
+
