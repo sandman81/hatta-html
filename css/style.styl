@@ -878,7 +878,8 @@
                             opacity 0
                             visibility hidden
                             transition all 0.2s ease
-                            .catalog-content-sidebar-filters-list_link.active &
+                            .catalog-content-sidebar-filters-list_link.active &,
+                            .catalog-filter-small-dropdown-sort_link.active &
                                 opacity 1
                                 visibility visible
                     &_counts
@@ -1075,6 +1076,7 @@
             flex 1 0 180px
         @media screen and (max-width: 767px)
             height 280px
+            flex 1 0 150px
         .product-slider &,
         .section-product-slider &
             margin 0 0 0 -1px
@@ -1163,6 +1165,7 @@
             transition background 0.2s ease
             @media screen and (max-width: 767px)
                 font-size 12px
+                padding-left 15px
             &:before,
             &:after
                 content ''
@@ -2072,6 +2075,9 @@
         margin-top 12px
         .pager-content
             justify-content flex-start
+    @media screen and (max-width: 767px)
+        .pager-content
+            justify-content center
     &_view-more
         position absolute
         top 0
@@ -2082,6 +2088,8 @@
         width 240px
         font-size 12px
         color grayColor
+        @media screen and (max-width: 767px)
+            display none
 
 .sections-top-banner
     margin-bottom 20px
@@ -2898,6 +2906,12 @@
                 border 1px solid placeholderColor
                 font-size 12px
                 text-transform uppercase
+                &.active
+                    color #df0c3e
+                    .sprite-icon-cat-filter-but
+                        @extend .sprite-icon-cat-filter-but-active
+                    .sprite-icon-cat-sort-but
+                        @extend .sprite-icon-cat-sort-but-active    
                 &:not(:last-child)
                     margin-right 5px
                 .sprite-icon-cat-filter-but
@@ -2960,6 +2974,13 @@
                 color grayColor
                 border 1px solid grayBorder
                 margin-top -1px
+                padding 0 7px 0 17px
+                .catalog-content-sidebar-filters-list_link_checkbox
+                    margin 0
+                &_title
+                    font-family fontBold
+                    span
+                        font-family fontReg
     
 .call-popup
     position absolute
