@@ -128,6 +128,26 @@ $(function(){
 
     $('.js-cat-small-drop-filters .catalog-content-sidebar-filters_panel').addClass('closed');
 
+    $('.product-content-top-info').each(function(index, el) {
+        var rating = $(this).find('.product-content-top-info-main-title-rating-rate').clone();
+        $(this).find('.product-content-top-info-main_code').after(rating);        
+    });
+
+
+    $('.product-content-bottom').each(function(index, el) {
+        var revTitle = $(this).find('.product-content-bottom-head-reviews_title').text();
+        $(this).find('.js-tab-reviews-but').text(revTitle);
+        var revContent = $(this).find('.product-content-bottom-content-reviews').clone();
+        $(this).find('.js-product-tab-rev-content').append(revContent);
+    });
+
+    $('.js-tab-reviews-but').click(function(event) {
+        $('.product-content-bottom-head-reviews').addClass('active');
+    });
+
+    $('.js-product-tab-but:not(.js-tab-reviews-but)').click(function(event) {
+        $('.product-content-bottom-head-reviews').removeClass('active');
+    });
 
 
 
@@ -513,6 +533,10 @@ $(function(){
         $(this).closest('.catalog-filter-small-dropdown').removeClass('active');
         $('.catalog-filter-small-top-buttons_but').removeClass('active');
     });
+
+
+
+
 
 
 
