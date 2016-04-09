@@ -149,6 +149,21 @@ $(function(){
         $('.product-content-bottom-head-reviews').removeClass('active');
     });
 
+    $('.product-content').each(function(index, el) {
+        var tabButton1 = $(this).find('.js-product-tab-but-1').text();
+        var tabButton2 = $(this).find('.js-product-tab-but-2').text();
+        var tabButton3 = $(this).find('.js-product-tab-but-3').text();
+        var tabText1 = $(this).find('.js-product-tab-box-1').html();
+        var tabText2 = $(this).find('.js-product-tab-box-2').html();
+        //console.log(tabText1,tabText2)
+        $(this).find('.js-product-small-tab-button-1').text(tabButton1);
+        $(this).find('.js-product-small-tab-button-2').text(tabButton2);
+        $(this).find('.js-product-small-tab-button-3').text(tabButton3);
+        $(this).find('.js-product-small-tab-text-1').html(tabText1);
+        $(this).find('.js-product-small-tab-text-2').html(tabText2);
+    });
+
+
 
 
 
@@ -532,6 +547,13 @@ $(function(){
     $('.js-cat-filter-closed-but').click(function(event) {
         $(this).closest('.catalog-filter-small-dropdown').removeClass('active');
         $('.catalog-filter-small-top-buttons_but').removeClass('active');
+    });
+
+    //small product tabs
+
+    $('.js-product-small-tab-button').click(function(event) {
+        $(this).closest('.product-content-bottom-small-box').toggleClass('active');
+        $(this).closest('.product-content-bottom-small-box').siblings('div').removeClass('active');
     });
 
 
