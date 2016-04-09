@@ -1250,6 +1250,8 @@
 
 .product-content
     color grayColor
+    @media screen and (max-width: 767px)
+        margin-bottom 11px
     &-top
         background white
         border 1px solid grayBorder
@@ -1257,6 +1259,10 @@
         position relative
         @media screen and (max-width: 1200px)
             flex-wrap wrap
+        @media screen and (max-width: 767px)
+            display block
+            background none
+            border none
         &-gallery
             flex 0 0 580px
             max-width 580px
@@ -1268,6 +1274,13 @@
                 flex 1 0 50%
                 max-width 50%
                 padding 0
+            @media screen and (max-width: 767px)
+                max-width initial
+                border-right none
+                background white
+                margin 0 -10px
+                padding 0 10px
+                height 365px
             &_img
                 width 420px
                 height 420px
@@ -1283,12 +1296,26 @@
                             top 50%
                             left 50%
                             transform translate(-50%, -50%)
+                @media screen and (max-width: 767px)
+                    .zoomWrapper
+                        width 100% !important
+                        height 320px !important
+                        display flex
+                        justify-content center
+                        align-items center
+                        img
+                            position relative !important
+                            top 0
+                            left 0
+                            transform none     
             &-thumbs
                 width 440px
                 margin 0 auto
                 @media screen and (max-width: 1200px)
                     width auto
                     padding 0 25px
+                @media screen and (max-width: 767px)
+                    display none
                 &-list
                     &_link
                         display flex
@@ -1339,6 +1366,9 @@
                 text-transform uppercase
                 padding 0 10px
                 border-radius 2px
+                @media screen and (max-width: 767px)
+                    top 12px
+                    right 7px
                 &:before
                     content ''
                     width: 0
@@ -1357,13 +1387,26 @@
                 flex 1 0 50%
                 border none
                 padding-bottom 0
+            @media screen and (max-width: 767px)
+                background white
+                border 1px solid grayBorder
+                margin-top 10px
+                padding-top 10px
+                margin-bottom 9px
             &-main
                 padding 0 18px 12px
                 border-bottom 1px solid grayBorder
                 @media screen and (max-width: 1200px)
                     padding 0 8px 10px
+                @media screen and (max-width: 767px)
+                    display flex
+                    flex-direction column
+                    padding 0 0 15px
+                    margin 0 9px
                 &-title-rating
                     margin-bottom 10px
+                    @media screen and (max-width: 767px)
+                        order 2
                     & > &-rate
                         @media screen and (max-width: 1200px)
                             display none
@@ -1375,10 +1418,14 @@
                     &-rate
                         font-size 12px
                         color defColor
+                        @media screen and (max-width: 767px)
+                            order 1
                         .product-content-top-info-main_code + &
                             margin-bottom 15px
                             @media screen and (min-width: 1200px)
                                 display none
+                            @media screen and (max-width: 767px)
+                                margin-bottom 8px
                         &_panel
                             position relative
                             @extend .sprite-icon-rating
@@ -1392,9 +1439,13 @@
                     font-size 12px
                     color redColor
                     margin-bottom 8px
+                    @media screen and (max-width: 767px)
+                        order 3
                 &_stock
                     font-size 12px
                     color placeholderColor
+                    @media screen and (max-width: 767px)
+                        order 4
                     &_info
                         font-size 14px
                         color redColor             
@@ -1404,6 +1455,11 @@
                 background bodyBg
                 @media screen and (max-width: 1200px)
                     padding 13px 9px 10px
+                @media screen and (max-width: 767px)
+                    background none
+                    padding-top 10px
+                    border-bottom none
+                    padding-bottom 0
                 &-price
                     padding-bottom 12px
                     border-bottom 1px solid grayBorder
@@ -1411,7 +1467,11 @@
                     @media screen and (max-width: 1200px)
                         padding-bottom 9px
                         align-items flex-start
+                    @media screen and (max-width: 767px)
+                        display block
                     &-info
+                        @media screen and (max-width: 767px)
+                            margin-bottom 12px
                         &-counts
                             margin-bottom 7px
                             color redColor
@@ -1429,7 +1489,10 @@
                     &_time
                         height 26px
                         background yellowColor
-                        padding 0 10px        
+                        padding 0 10px
+                        @media screen and (max-width: 767px)
+                            box-sizing border-box
+                            width 90px        
                 &-choice
                     margin-bottom 12px
                     border-bottom 1px solid grayBorder        
@@ -1437,6 +1500,10 @@
                     @media screen and (max-width: 1200px)
                         padding-bottom 9px
                         margin-bottom 10px
+                    @media screen and (max-width: 767px)
+                        border-bottom none
+                        padding-bottom 0
+                        margin-bottom 18px
                     &_label
                         font-size 12px
                         margin-bottom 5px
@@ -1445,8 +1512,16 @@
                         height 30px
                         .chosen-container
                             z-index 1
+                            .chosen-single
+                                @media screen and (max-width: 767px)
+                                    padding-left 7px
                             .chosen-single div
                                 border-color placeholderColor transparent transparent transparent
+                                margin-left 5px
+                            .chosen-single span
+                                overflow hidden
+                                white-space nowrap
+                                text-overflow ellipsis
                 &-colors
                     padding-bottom 12px
                     border-bottom 1px solid grayBorder
@@ -1454,6 +1529,9 @@
                     position relative
                     @media screen and (max-width: 1200px)
                         padding-bottom 10px
+                    @media screen and (max-width: 767px)
+                        display block
+                        padding-bottom 15px
                     &-main
                         &-label
                             margin-bottom 12px
@@ -1469,6 +1547,8 @@
                             border 1px solid redColor
                             position relative
                             background white
+                            @media screen and (max-width: 767px)
+                                display none
                             &:after
                                 content ''
                                 @extend .sprite-icon-product-color-current
@@ -1484,6 +1564,8 @@
                         flex 0 0 200px
                         &_label
                             margin-bottom 12px
+                            @media screen and (max-width: 767px)
+                                display none
                         &-colors
                             margin-bottom 10px
                             &_color
@@ -1497,6 +1579,8 @@
                                 &.active
                                     border 1px solid redColor
                         &_more
+                            @media screen and (max-width: 767px)
+                                justify-content center
                             &_button
                                 cursor pointer
                                 user-select none
@@ -1546,6 +1630,8 @@
                         margin-bottom 11px
                         &_label
                             margin-right 18px
+                            @media screen and (max-width: 767px)
+                                font-size 12px
                         &_but
                             cursor pointer
                             height 20px
@@ -1560,6 +1646,9 @@
                             text-align center
                     &-buttons
                         position relative
+                        @media screen and (max-width: 767px)
+                            flex-direction column
+                            align-items center
                         &_add-card
                             cursor pointer
                             flex 0 0 170px
@@ -1569,6 +1658,10 @@
                             color grayColor
                             background yellowColor
                             transition background 0.2s ease
+                            @media screen and (max-width: 767px)
+                                flex 0 0 40px
+                                margin-bottom 10px
+                                width 280px
                             &:hover
                                 background #feea85
                             i
@@ -1585,6 +1678,9 @@
                             color grayColor
                             border 2px solid yellowColor
                             transition border-color 0.3s ease
+                            @media screen and (max-width: 767px)
+                                flex 0 0 40px
+                                width 280px
                             &.active
                                 border 2px solid redColor
                                 box-shadow 3px 3px 7px rgba(black, 0.35)
@@ -1641,10 +1737,15 @@
                         border none
                         padding 0
                         margin 0
+                    @media screen and (max-width: 767px)
+                        justify-content center
                     &_but
                         cursor pointer
                         font-size 12px
                         color blueColor
+                        @media screen and (max-width: 767px)
+                            &:first-child
+                                display none
                         &-text
                             border-bottom 1px dashed blueColor
                         i
@@ -1654,10 +1755,18 @@
                         position absolute
                         left 17px
                         bottom 100px
+                    @media screen and (max-width: 767px)
+                        bottom initial
+                        top 330px
+                        left 0
+                        display flex
+                        align-items center
                     &_label
                         color black
                         margin-bottom 10px
                         font-size 12px
+                        @media screen and (max-width: 767px)
+                            margin 0 5px 0 0
         &-payment
             flex 1 0 0
             padding 20px 10px 20px 15px
@@ -1668,6 +1777,12 @@
                 box-sizing border-box
                 height 78px
                 padding 22px 20px 0
+            @media screen and (max-width: 767px)
+                background white
+                border 1px solid grayBorder
+                flex-wrap wrap
+                padding 10px 0
+                height auto
             &-box
                 margin-bottom 20px
                 @media screen and (max-width: 1200px)
@@ -1675,6 +1790,11 @@
                     &:first-child
                         display flex
                         align-items flex-start
+                        @media screen and (max-width: 767px)
+                            justify-content center
+                            margin-bottom 20px
+                @media screen and (max-width: 767px)
+                    flex 0 0 50%
                 &_title
                     font-size 16px
                     font-family fontBold
@@ -1712,10 +1832,12 @@
                 &_free
                     margin-top 10px
                     @media screen and (max-width: 1200px)
-                        margin 0 40px 0 0
+                        margin 0 25% 0 0
                         order 1
                         flex 0 0 140px
                         align-items flex-start
+                    @media screen and (max-width: 767px)
+                        display none
                     .sprite-icon-delivery
                         margin-right 14px
                         flex 0 0 80px
@@ -1739,6 +1861,50 @@
     &-bottom
         margin-bottom 20px
         position relative
+        @media screen and (max-width: 767px)
+            display none
+        &-small
+            background white
+            border 1px solid grayBorder
+            border-bottom none
+            &-box
+                &_button
+                    border-top 1px solid grayBorder
+                    border-bottom 1px solid grayBorder
+                    height 38px
+                    margin-top -1px
+                    cursor pointer
+                    padding 0 8px 0 10px
+                    text-transform uppercase
+                    color grayColor
+                    font-family fontMed
+                    text-decoration none
+                    &:after
+                        content ''
+                        width 0
+                        height 0
+                        border-style solid
+                        border-width 4px 4px 0 4px
+                        border-color placeholderColor transparent transparent transparent
+                        transition transform 0.3s ease
+                        .product-content-bottom-small-box:not(.active) &
+                            transform rotate(-90deg)
+                &_content
+                    padding 15px 10px
+                    animation-duration 0.3s
+                    line-height 1.3
+                    display none
+                    p:not(:last-child)
+                        margin-bottom 20px
+                    h3
+                        margin-bottom 20px
+                        font-size 18px
+                        font-weight normal
+                        font-family fontMed
+                    .product-content-bottom-small-box.active &
+                        display block
+            @media screen and (min-width: 767px)
+                display none
         &-head
             height 38px
             background white
