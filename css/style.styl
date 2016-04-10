@@ -2713,9 +2713,17 @@
     margin-bottom 20px
     font-size 20px
     color black
+    @media screen and (max-width: 767px)
+        margin 10px 0 0
+        height 35px
+        display flex
+        justify-content center
+        align-items center
     &_counts
         font-size 14px
         color placeholderColor
+        @media screen and (max-width: 767px)
+            display none
 
 .cart-content
     margin-bottom 40px
@@ -2725,6 +2733,10 @@
         border 1px solid grayBorder
         border-top none
         padding 0 20px
+        @media screen and (max-width: 1200px)
+            border-top 1px solid grayBorder
+        @media screen and (max-width: 767px)
+            display none
         &-img-title
             flex 0 0 45%
         &-price-full
@@ -2740,6 +2752,8 @@
                 padding-left 5px
             &.label-price
                 flex 0 0 180px
+                @media screen and (max-width: 880px)
+                    flex 0 0 110px
     &-list
         margin-bottom 20px
         &-product
@@ -2749,10 +2763,24 @@
             height 122px
             padding 0 20px
             color black
+            @media screen and (max-width: 767px)
+                border-top 1px solid grayBorder
+                height auto
+                padding 0
+                display block
+                &:not(:last-child)
+                    margin-bottom 10px
             &-img-title
                 flex 0 0 40%
                 height 100%
                 margin-right 5%
+                @media screen and (max-width: 767px)
+                    margin 0
+                    padding 10px
+                    border-bottom 1px solid grayBorder
+                    align-items flex-start
+                    height 100px
+                    box-sizing border-box
             &_img
                 flex 0 0 90px
                 height 95%
@@ -2767,6 +2795,10 @@
                     text-decoration underline
             &-counts
                 flex 0 0 17%
+                @media screen and (max-width: 767px)
+                    padding 4px 20px
+                    border-bottom 1px solid grayBorder
+                    position relative
                 &_button
                     cursor pointer
                     flex 0 0 20px
@@ -2781,15 +2813,34 @@
                     color black
             &-price-full
                 flex 0 0 22%
+                .label-price,
+                .label-full
+                    @media screen and (min-width: 767px)    
+                        display none
+                @media screen and (max-width: 767px)
+                    padding 10px 30px 10px 10px
+                    justify-content space-between
+                    .cart-content-labels_label
+                        margin-bottom 6px
+                        flex 0 0 100%
             &_price
                 line-height 1.2
                 flex 0 0 180px
+                @media screen and (max-width: 880px)
+                    flex 0 0 110px
+                @media screen and (max-width: 767px)
+                    display flex
+                    flex-wrap wrap
+                    flex 0 0 50%
                 &_old
                     color placeholderColor
                     text-decoration line-through
+                    @media screen and (max-width: 767px)
+                        margin-left 5px
             &_full
                 font-size 16px
                 font-family fontMed
+                white-space nowrap
             &-remove
                 flex 1 0 0
                 &_button
@@ -2797,20 +2848,38 @@
                     user-select none
                     font-size 12px
                     color redColor
+                    @media screen and (max-width: 767px)
+                        position absolute
+                        right 20px
+                        top 50%
+                        transform translateY(-50%)
     &-bottom
+        @media screen and (max-width: 767px)
+            flex-direction column
         &-discount
             margin-bottom 40px
+            @media screen and (max-width: 767px)
+                display block
+                margin-bottom 25px
+                &_counts
+                    display none
             &_label
                 color placeholderColor
                 font-size 12px
+                @media screen and (max-width: 767px)
+                    margin-bottom 8px
             &_form
                 margin 0 10px
+                @media screen and (max-width: 767px)
+                    margin 0
             &_field
                 width 175px
                 height 36px
                 font-size 14px
                 text-transform uppercase
                 padding 0 15px
+                @media screen and (max-width: 767px)
+                    width 100%
             &_submit
                 cursor pointer
                 width 80px
@@ -2825,11 +2894,15 @@
                 user-select none
                 color black
                 margin-bottom 20px
+                @media screen and (max-width: 767px)
+                    display none
             &_back
                 text-decoration none
                 font-size 12px
                 color placeholderColor
                 user-select none
+                @media screen and (max-width: 767px)
+                    align-self center
                 &:before
                     content ''
                     width 0
@@ -2854,6 +2927,9 @@
                 width 180px
                 text-decoration none
                 user-select none
+                @media screen and (max-width: 767px)
+                    width 100%
+                    margin-bottom 30px
 
 .compare-content
     color grayColor
@@ -2962,30 +3038,89 @@
         border 1px solid grayBorder
         padding 22px 25px
         margin-left -1px
+        @media screen and (max-width: 1200px)
+            flex-direction column
+        @media screen and (max-width: 767px)
+            background none
+            border none
+            margin 0
+            padding 0
         &-form
             flex-basis 480px
             margin-right 35px
+            @media screen and (max-width: 1200px)
+                margin-right 0
+                flex 0 0 auto
+            @media screen and (max-width: 767px)
+                margin-bottom 20px
             &-info
                 margin-bottom 60px
+                @media screen and (max-width: 1200px)
+                    margin-bottom 30px
                 &-item
                     margin-bottom 20px
+                    @media screen and (max-width: 767px)
+                        margin-bottom 16px
                     &_field
                         width 300px
+                        @media screen and (max-width: 1200px)
+                            flex 1 0 0
+                        @media screen and (min-width: 767px)
+                            +placeholder()
+                                opacity 0
                     &_label
                         color black
                         white-space nowrap
+                        @media screen and (max-width: 1200px)
+                            flex 0 0 180px
+                        @media screen and (max-width: 767px)
+                            display none
                 &-action
                     &_submit
                         height 36px
                         width 180px
+                        @media screen and (max-width: 767px)
+                            width 100%
         &-enter
             flex-basis 280px
+            @media screen and (max-width: 1200px)
+                flex 0 0 auto
+                width 410px
+                margin-bottom 55px
+                flex-direction row
+                flex-wrap wrap
+                justify-content space-between
+                .register-content-enter_desc
+                    margin-bottom 20px
+                .header-top-content_login-reg-popup-content-links_link
+                    flex 0 0 200px
+                    margin-bottom 0
+                    height 30px
+                    box-sizing border-box
+            @media screen and (max-width: 767px)
+                margin-bottom 0
+                .register-content-enter_desc
+                    margin-bottom 10px
+            .header-top-content_login-reg-popup-content-links_link
+                span
+                    margin-right 5px
+                @media screen and (max-width: 430px)
+                    flex 0 0 145px
+                    span
+                        display none
+            @media screen and (max-width: 430px)
+                width auto
+
     &-reviews
         margin-left -1px
+        @media screen and (max-width: 767px)
+            margin 0
         &-item
             background white
             border 1px solid grayBorder
-            min-height 260px    
+            min-height 260px   
+            @media screen and (max-width: 767px)
+                display block 
             &:not(:first-child)
                 margin-top -1px
             &-product
@@ -2993,6 +3128,9 @@
                 border-right 1px solid grayBorder
                 box-sizing border-box
                 padding 15px 13px
+                @media screen and (max-width: 767px)
+                    padding-bottom 0
+                    margin-bottom 20px
                 &_title
                     text-decoration none
                     color grayColor
@@ -3003,13 +3141,21 @@
                     font-size 12px
                     text-transform uppercase
                     margin-bottom 10px
+                    @media screen and (max-width: 767px)
+                        margin-bottom 0
                 &_img
                     flex 0 0 150px
+                    @media screen and (max-width: 767px)
+                        display none
                     img
                         max-height 150px
             &-review
                 flex-grow 1 
                 padding 20px 25px
+                @media screen and (max-width: 767px)
+                    padding-top 0
+                    padding-left 13px
+                    padding-right 13px
                 &-top
                     margin-bottom 15px
                     &-rating
@@ -3384,6 +3530,18 @@
                     font-family fontBold
                     span
                         font-family fontReg
+
+.cabinet-tabs
+    @media screen and (max-width: 1200px)
+        .front-product-sections-content-tabs_but
+            padding 0 0 0 8px
+            &-text:before
+                margin-right 8px
+            .sprite-icon-section-menu-arrow
+                display none
+    @media screen and (max-width: 767px)
+        display none
+    
     
 .call-popup
     position absolute

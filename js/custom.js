@@ -169,6 +169,13 @@ $(function(){
         $(this).find('.open-blog-content_small-title').append(title, created);
     });
 
+    $('.cart-content').each(function(index, el) {
+        priceLabel = $(this).find('.cart-content-labels .label-price').clone();
+        sumLabel = $(this).find('.cart-content-labels .label-full').clone();
+        $(this).find('.cart-content-list-product-price-full .cart-content-list-product_price').prepend(priceLabel);
+        $(this).find('.cart-content-list-product-price-full .cart-content-list-product_full').prepend(sumLabel); 
+    });
+
     enquire.register("screen and (max-width: 767px)", {
 
         deferSetup : true,
@@ -200,8 +207,6 @@ $(function(){
                 $(this).find('.blog-list-item_title').after(full); 
             });
 
-                 
-
         },
         unmatch : function() {
             
@@ -214,6 +219,78 @@ $(function(){
         }  
 
     });
+
+    enquire.register("screen and (max-width: 1200px) and (min-width: 767px)", {
+
+        deferSetup : true,
+
+        match : function() {
+
+            $('.cabinet-content-user-data').each(function(index, el) {
+                userEnter = $(this).find('> .cabinet-content-user-data-enter');
+                $(this).find('.cabinet-content-user-data-form-info').after(userEnter); 
+            });
+                 
+        },
+        unmatch : function() {
+            
+            $('.cabinet-content-user-data').each(function(index, el) {
+                userEnter = $(this).find('.cabinet-content-user-data-form-info + .cabinet-content-user-data-enter');
+                $(this).find('.cabinet-content-user-data-form-info + .cabinet-content-user-data-enter').remove();
+                $(this).append(userEnter);
+            });
+            
+        }  
+
+    });
+
+    enquire.register("screen and (max-width: 767px)", {
+
+        deferSetup : true,
+
+        match : function() {
+
+            $('.cart-content-list-product').each(function(index, el) {
+                removeButton = $(this).find('.cart-content-list-product-remove .cart-content-list-product-remove_button');
+                $(this).find('.cart-content-list-product-counts').append(removeButton); 
+            });
+                 
+        },
+        unmatch : function() {
+            
+            $('.cart-content-list-product').each(function(index, el) {
+                removeButton = $(this).find('.cart-content-list-product-counts .cart-content-list-product-remove_button');
+                $(this).find('.cart-content-list-product-remove').append(removeButton);
+            });
+            
+        }  
+
+    });
+
+    enquire.register("screen and (max-width: 767px)", {
+
+        deferSetup : true,
+
+        match : function() {
+
+            $('.cart-content-bottom').each(function(index, el) {
+                backButton = $(this).find('.cart-content-bottom-left .cart-content-bottom-buttons_back');
+                $(this).append(backButton); 
+            });
+                 
+        },
+        unmatch : function() {
+            
+            $('.cart-content-bottom').each(function(index, el) {
+                backButton = $(this).find('> .cart-content-bottom-buttons_back');
+                $(this).find('.cart-content-bottom-left .cart-content-bottom-buttons').append(backButton);
+            });
+            
+        }  
+
+    });
+
+
 
 
 
