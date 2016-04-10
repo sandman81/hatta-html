@@ -1597,7 +1597,7 @@
                         position absolute
                         box-sizing border-box
                         background white
-                        left -18px
+                        right -18px
                         width 380px
                         top 97px
                         z-index 2
@@ -2084,6 +2084,32 @@
                             border-top 1px dashed grayBorder
                             padding 8px 0 0 40px
 
+.product-reviews-small
+    margin-top 5px
+    &-top
+        position relative
+        height 40px
+        color grayColor
+        font-size 20px
+        &_back
+            position absolute
+            left 25px
+            top 50%
+            width 0
+            height 0
+            border-style solid
+            border-width 4px 4px 4px 0
+            border-color transparent placeholderColor transparent transparent
+            transform translateY(-50%)
+    &_add-button
+        height 36px
+        margin-bottom 10px
+    &-content
+        background white
+        border 1px solid grayBorder
+        padding 15px 10px
+        color grayColor
+
 .pager-content
     font-size 12px
     flex 0 0 100%
@@ -2141,6 +2167,8 @@
     line-height 1.5
     animation-duration 0.3s
     display none
+    @media screen and (max-width: 767px)
+        width 96%
     &.active
         display block
     &_closed
@@ -3477,6 +3505,9 @@
     display none
     &.visible
         display block
+
+
+
 
 
 
