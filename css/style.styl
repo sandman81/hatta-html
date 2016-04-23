@@ -793,6 +793,7 @@
         display flex
         height 45px
         align-items center
+        justify-content center
     .catalog-title &,
     .sections-top-title &,
     .wishes-title &,
@@ -3195,8 +3196,18 @@
 
 .checkout-content
     margin-bottom 30px
+    @media screen and (max-width: 767px)
+        display block
+        margin 0
     &-user
         flex 0 0 480px
+        @media screen and (max-width: 1020px)
+            flex 0 0 300px
+            max-width 300px
+        @media screen and (max-width: 767px)
+            width 100%
+            max-width inherit
+            margin-bottom 15px
         &-tabs
             box-sizing border-box
             background white
@@ -3214,6 +3225,8 @@
                 position relative
                 top -1px
                 transition background 0.2s ease
+                @media screen and (max-width: 1020px)
+                    font-size 12px
                 &.active
                     background yellowColor
                     border-radius 13px
@@ -3223,8 +3236,19 @@
         &-new
             &-item
                 margin-bottom 17px
+                &.field-tel
+                    @media screen and (max-width: 1020px)
+                        display none
+                &.field-tel-medium
+                    @media screen and (min-width: 1020px)
+                        display none
                 &_field
                     width 300px
+                    @media screen and (min-width: 1020px)
+                        +placeholder()
+                            opacity 0
+                    @media screen and (max-width: 767px)
+                        width 100%
                     &.form-textarea
                         resize none
                         height 150px
@@ -3240,21 +3264,34 @@
                     color black
                 &_label
                     color black
+                    @media screen and (max-width: 1020px)
+                        display none
                     span
                         color redColor
                 &_tel
                     flex 0 0 300px
             &-action
+                @media screen and (max-width: 1020px)
+                    display block
                 &_desc
                     font-size 12px
                     color placeholderColor
+                    @media screen and (max-width: 1020px)
+                        margin-bottom 15px
                     span
                         color redColor
                 &_submit
                     height 36px
                     width 180px
+                    @media screen and (max-width: 1020px)
+                        width 100%
         &-old
             width 460px
+            @media screen and (max-width: 1020px)
+                width 300px
+                display block
+            @media screen and (max-width: 767px)
+                width 100%
             &-form
                 flex 0 0 240px   
                 &-item
@@ -3275,28 +3312,67 @@
             &-enter
                 margin-top 15px
                 flex 0 0 200px
+                @media screen and (max-width: 1020px)
+                    flex-direction row
+                    flex-wrap wrap
+                    justify-content space-between
+                    .header-top-content_login-reg-popup-content-links_link
+                        flex 0 0 145px
+                        box-sizing border-box
+                        height 30px
+                        span
+                            display none
+                @media screen and (max-width: 767px)
+                    justify-content flex-start
                 &_title
                     text-align center
                     color #010101
                     margin-bottom 25px
+                    @media screen and (max-width: 1020px)
+                        margin-bottom 15px
+                        flex 0 0 100%
                 .header-top-content_login-reg-popup-content-links_link.fb
                     margin-bottom 9px
+                    @media screen and (max-width: 1020px)
+                        margin 0
+                    @media screen and (max-width: 767px)
+                        margin-right 8px
     &-order
         flex 0 0 480px
         width 480px
+        @media screen and (max-width: 1020px)
+            flex 0 0 360px
+            max-width 360px
+        @media screen and (max-width: 767px)
+            width 100%
+            max-width inherit
         &-products
             background white
             border 1px solid grayBorder
+            @media screen and (max-width: 767px)
+                background none
+                border-bottom none
+            .owl-stage
+                @media screen and (max-width: 767px)
+                    width 100% !important
+                    .owl-item
+                        float none
+                        width 100% !important
             &-list
                 &-item
                     border-bottom 1px solid grayBorder
                     box-sizing border-box
                     height 123px
                     padding 10px
+                    @media screen and (max-width: 767px)
+                        height 90px
+                        background white
                     &_img
                         flex 0 0 100px
                         height 100px
                         margin-right 15px
+                        @media screen and (max-width: 767px)
+                            display none
                     &-info
                         flex 1 0 0
                         padding 5px
@@ -3310,6 +3386,8 @@
                 height 28px
                 border-bottom 1px solid grayBorder
                 position relative
+                @media screen and (max-width: 767px)
+                    display none
                 .owl-dots
                     position absolute
                     left 50%
@@ -3369,6 +3447,10 @@
                     line-height 1.2
         .cart-content-bottom-action-item:last-child
             margin-bottom 0
+
+.checkout-bottom
+    @media screen and (max-width: 767px)
+        display none
 
 .product-list-row
     margin-left -1px

@@ -169,12 +169,13 @@ $(function(){
         $(this).find('.open-blog-content_small-title').append(title, created);
     });
 
-    $('.cart-content').each(function(index, el) {
+    $('.cart-content, .cabinet-content').each(function(index, el) {
         priceLabel = $(this).find('.cart-content-labels .label-price').clone();
         sumLabel = $(this).find('.cart-content-labels .label-full').clone();
         $(this).find('.cart-content-list-product-price-full .cart-content-list-product_price').prepend(priceLabel);
         $(this).find('.cart-content-list-product-price-full .cart-content-list-product_full').prepend(sumLabel); 
     });
+
 
     enquire.register("screen and (max-width: 767px)", {
 
@@ -578,6 +579,7 @@ $(function(){
     $('.checkout-content-user').each(function(index, el) {
         $(".js-tel-code").inputmask("(999)");
         $(".js-tel-number").inputmask("9999999");
+        $(".js-tel-number-medium").inputmask("(999) 9999999");
     });
 
 
@@ -624,7 +626,17 @@ $(function(){
                 margin: 0,
                 nav: true,
                 mouseDrag: false,
-                dots: true
+                dots: true,
+                responsive:{
+                    0:{
+                        items: 0,
+                        nav: false,
+                        dots: false
+                    },
+                    768:{
+                        items: 1
+                    }
+                }
             });
         }
     });
