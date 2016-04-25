@@ -291,6 +291,54 @@ $(function(){
 
     });
 
+    enquire.register("screen and (max-width: 767px)", {
+
+        deferSetup : true,
+
+        match : function() {
+
+            $('.product-list-row-item').each(function(index, el) {
+                actionsBox = $(this).find('.product-list-row-item-actions');
+                $(this).find('.product-list-row-item-info-text').append(actionsBox); 
+            });
+                 
+        },
+        unmatch : function() {
+            
+            $('.product-list-row-item').each(function(index, el) {
+                actionsBox = $(this).find('.product-list-row-item-actions');
+                $(this).find('.product-list-row-item-content').append(actionsBox);
+            });
+            
+        }  
+
+    });
+
+    enquire.register("screen and (max-width: 767px)", {
+
+        deferSetup : true,
+
+        match : function() {
+
+            $('.catalog-content').each(function(index, el) {
+                filters = $(this).find('.sections-filters');
+                $(this).closest('.layout-content').find('.section-drop-small').append(filters); 
+            });
+                 
+        },
+        unmatch : function() {
+            
+            $('.section-drop-small').each(function(index, el) {
+                filters = $(this).find('.sections-filters');
+                $(this).closest('.layout-content').find('.catalog-content-sidebar').append(filters);
+            });
+            
+        }  
+
+    });
+
+    
+
 
 
 
@@ -697,6 +745,16 @@ $(function(){
     $('.js-product-small-tab-button').click(function(event) {
         $(this).closest('.product-content-bottom-small-box').toggleClass('active');
         $(this).closest('.product-content-bottom-small-box').siblings('div').removeClass('active');
+    });
+
+    //section filters small dropdown
+
+    $('.section-drop-small_icon').click(function(event) {
+        $(this).closest('.section-drop-small').addClass('active');
+    });
+
+    $('.js-section-filters-small-button').click(function(event) {
+        $(this).closest('.section-drop-small').removeClass('active');
     });
 
 

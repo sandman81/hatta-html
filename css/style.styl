@@ -780,6 +780,8 @@
             font-size 12px
         @media screen and (max-width: 767px)
             display none
+            &.search-counts
+                display block
 
 .page-title
     font-weight normal
@@ -818,6 +820,8 @@
             border 1px solid grayBorder
             padding 20px 0
             color grayColor
+            .sprite-icon-popup-closed
+                display none
             &_panel
                 padding-left 20px
                 padding-right 18px
@@ -983,6 +987,9 @@
             flex 0 0 248px
             @media screen and (max-width: 1200px)
                 flex 0 0 150px
+            @media screen and (max-width: 767px)
+                .wishes-title &
+                    display none
             &_label
                 margin-right 8px
                 white-space nowrap
@@ -1073,7 +1080,7 @@
     margin 1px 0 0 0
     &-item
         box-sizing border-box
-        flex 1 0 240px
+        flex 0 0 240px
         position relative
         height 360px
         margin -1px 0 0 -1px
@@ -2392,7 +2399,6 @@
             @media screen and (max-width: 767px)
                 flex 0 0 200px
             
-
 .front-about
     &_text
         color placeholderColor
@@ -2426,23 +2432,45 @@
 .sections-top-banner
     margin-bottom 20px
     border 1px solid grayBorder
+    height 105px
+    @media screen and (max-width: 767px)
+        display none
     img
         display block
+        height 105px
+        object-fit cover
 
 .sections-top-title
     height 30px
     padding-left 20px
     margin-bottom 10px
+    @media screen and (max-width: 767px)
+        padding-left 0
 
 .sections-sort
     margin-bottom 5px
+    @media screen and (max-width: 767px)
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content space-between
     &_title
         text-transform uppercase
         color grayColor
         margin 0 0 15px 20px
         font-family fontBold
+        @media screen and (max-width: 767px)
+            margin 0
+            order 1
+            display flex
+            align-items center
     &-products
         margin-bottom 15px
+        @media screen and (max-width: 767px)
+            flex-direction column
+            order 3
+            flex 0 0 100%
+            margin-top 10px
         &-link
             flex 0 0 (100% / 3)
             height 240px
@@ -2452,6 +2480,14 @@
             font-family fontBold
             position relative
             margin-left -1px
+            @media screen and (max-width: 1200px)
+                height 200px
+            @media screen and (max-width: 767px)
+                height 80px
+                flex 0 0 80px
+                margin-left 0
+                & + &
+                    margin-top -1px
             &-content
                 background white
                 position absolute
@@ -2463,6 +2499,11 @@
                 box-sizing border-box
                 padding 15px
                 transition all 0.2s ease
+                @media screen and (max-width: 1200px)
+                    justify-content flex-start
+                @media screen and (max-width: 767px)
+                    flex-direction row
+                    padding 5px 15px
                 @media screen and (min-width: 1200px)
                     .sections-sort-products-link:hover &
                         height 260px
@@ -2475,9 +2516,27 @@
             &_img
                 width 100%
                 flex 0 0 175px
+                @media screen and (max-width: 1200px)
+                    flex 0 0 130px
+                    margin-bottom 12px
+                @media screen and (max-width: 767px)
+                    flex 0 0 100px
+                    margin-bottom 0
+                    margin-right 20px
                 img
-                    max-height 100%
+                    max-height 175px
+                    @media screen and (max-width: 1200px)
+                        max-height 130px
+                    @media screen and (max-width: 767px)
+                        max-height 70px
+            &_title
+                text-align center
+                line-height 1.2
+                @media screen and (max-width: 767px)
+                    text-align left
     &-view-all
+        @media screen and (max-width: 767px)
+            order 2
         &_link
             height 30px
             text-decoration none
@@ -2493,14 +2552,30 @@
                 margin-right 20px          
 
 .brand-sort
+    @media screen and (max-width: 767px)
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content space-between
     &-brands
         margin-bottom 15px
+        @media screen and (max-width: 767px)
+            margin-bottom 0
+            order 3
+            flex 0 0 100%
+            margin-top 10px
         &-link
             flex 0 0 (100% / 6)
             height 160px
             position relative
             margin-left -1px
             margin-top -1px
+            @media screen and (max-width: 1200px)
+                height 135px
+                flex 1 0 (100% / 4)
+            @media screen and (max-width: 767px)
+                height 100px
+                flex 1 0 (100% / 3)
             &-content
                 background white
                 position absolute
@@ -2515,6 +2590,12 @@
                 img
                     max-height 160px
                     max-width 160px
+                    @media screen and (max-width: 1200px)
+                        max-height 135px
+                        max-width 135px
+                    @media screen and (max-width: 767px)
+                        max-height 90px
+                        max-width 90px
                 @media screen and (min-width: 1200px)
                     .brand-sort-brands-link:hover &
                         height 180px
@@ -2524,6 +2605,55 @@
                         padding 25px
                         box-shadow 3px 3px 7px rgba(black, 0.35)
                         z-index 2
+
+.section-drop-small
+    user-select none
+    height 50px
+    background grayBorder
+    position relative
+    padding-left 20px
+    text-transform uppercase
+    font-size 12px
+    color placeholderColor
+    border-bottom 1px solid white
+    margin-bottom 5px
+    z-index 10
+    &.active .sections-filters
+        transform translateX(287px)
+    &_icon
+        box-sizing border-box
+        flex 0 0 16px
+        height 12px
+        border-top 2px solid defColor
+        border-bottom 2px solid defColor
+        margin-right 10px
+        cursor pointer
+        &:before
+            content ''
+            height 2px
+            flex 0 0 100%
+            background defColor
+    @media screen and (min-width: 767px)
+        display none
+    .sections-filters
+        position absolute
+        top 10px
+        left -280px
+        background yellowColor
+        box-sizing border-box
+        width 240px
+        text-transform none
+        transition all 0.3s ease
+        .catalog-content-sidebar-filters-list_link
+            font-size 14px
+        .sprite-icon-popup-closed
+            position absolute
+            right -37px
+            top 7px
+            opacity 0.7
+            display block
+            &:active
+                opacity 1
 
 .main-blog
     box-sizing border-box
@@ -2961,7 +3091,7 @@
         .compare-content-row:last-child &
             border-bottom 1px solid grayBorder 
         &.label-cell
-            flex 0 0 20%
+            flex 0 0 180px
             &.first-label
                 font-size 17px
                 font-family fontBold
@@ -2972,12 +3102,17 @@
                 .compare-content-row.top-row + .compare-content-row &
                     padding-top 30px 
         &.product-cell
-            flex 0 0 (80% / 3)
+            flex 1 0 0
             &.main-cell
                 padding 10px 30px
+                @media screen and (max-width: 940px)
+                    padding 8px
             &.option-cell
                 padding 10px 30px
                 line-height 1.5
+                @media screen and (max-width: 940px)
+                    font-size 12px
+                    padding 10px 15px
                 .compare-content-row:last-child &
                     padding-bottom 30px
                 .compare-content-row.top-row + .compare-content-row &
@@ -2990,6 +3125,8 @@
             @extend .space-start
             padding-left 60px
             margin-top 10px
+            @media screen and (max-width: 940px)
+                padding-left 35px
     &_img
         flex 0 0 200px
         img
@@ -3001,36 +3138,95 @@
     margin-bottom 15px
 
 .register-content
+    @media screen and (max-width: 1000px)
+        display block
     &-form
         flex-basis 480px
         margin-right 40px
+        @media screen and (max-width: 1000px)
+            width 410px
+            margin-right 0
+            margin-bottom 25px
+        @media screen and (max-width: 767px)
+            width 100%
+            margin-bottom 20px
         &-item
             margin-bottom 17px
             &_label
                 flex-basis 180px
                 color black
+                @media screen and (max-width: 767px)
+                    display none
+            &_field
+                @media screen and (min-width: 767px)
+                    +placeholder()
+                        opacity 0
         &-bottom
             margin-top 30px
+            @media screen and (max-width: 767px)
+                margin-top 15px
+                flex-direction column
             &_desc
                 flex-basis 175px
                 font-size 12px
                 color placeholderColor
                 line-height 1.1
+                @media screen and (max-width: 767px)
+                    flex 0 0 auto
+                    margin-bottom 15px
+                    display flex
+                    flex-direction column
                 a
                     color placeholderColor
             &_submit
                 height 36px
                 width 180px
+                @media screen and (max-width: 767px)
+                    width 100%
     &-enter
+        @media screen and (max-width: 1000px)
+            width 410px
+            flex-direction row
+            flex-wrap wrap
+            justify-content space-between
+        @media screen and (max-width: 767px)
+            width 100%
+            justify-content flex-start
         &_title
             color grayColor
             margin-bottom 7px
+            @media screen and (max-width: 1000px)
+                flex 0 0 100%
+            @media screen and (max-width: 767px)
+                display none
         &_desc
             font-size 12px
             margin-bottom 10px
+            &-small
+                flex 0 0 100%
+                text-align center
+                margin-bottom 15px
+                color black
+                @media screen and (min-width: 767px)
+                    display none
+            @media screen and (max-width: 1000px)
+                flex 0 0 100%
+            @media screen and (max-width: 767px)
+                display none
         .header-top-content_login-reg-popup-content-links_link
             width 200px
             margin-bottom 9px
+            @media screen and (max-width: 1000px)
+                margin 0
+                flex 0 0 200px
+                box-sizing border-box
+                height 30px
+            @media screen and (max-width: 767px)
+                flex 0 0 145px
+                &.fb
+                    margin-right 8px
+                span
+                    display none
         
 .cabinet-content
     flex 1 0 0
@@ -3457,6 +3653,10 @@
     &-item
         position relative
         height 290px
+        @media screen and (max-width: 1200px)
+            height 235px
+        @media screen and (max-width: 767px)
+            height 200px
         &:not(:first-child)
             margin-top -1px
         &-content
@@ -3481,12 +3681,22 @@
             flex 1 0 0
             padding 15px
             transition all 0.2s ease
+            @media screen and (max-width: 767px)
+                padding-right 0
+                padding-bottom 0
             .product-list-row-item:hover &
-                padding 25px
+                @media screen and (min-width: 1200px)
+                    padding 25px
             &-left
                 flex 0 0 245px
                 position relative
                 margin-right 30px
+                @media screen and (max-width: 1200px)
+                    flex 0 0 170px
+                    margin-right 20px
+                @media screen and (max-width: 767px)
+                    flex 0 0 140px
+                    margin-right 15px
                 &_img
                     width 100%
                     img
@@ -3495,8 +3705,17 @@
                     top 0
                     right 0
             &-text
+                flex 1 0 0
+                @media screen and (max-width: 767px)
+                    justify-content space-between
+                    overflow hidden
+                    .product-list-item_code
+                        display block
+                        font-size 10px
                 .product-list-item_title
                     color grayColor
+                    flex 0 0 auto
+                    margin-bottom 15px
                 .product-list-item_code
                     margin-bottom 15px
                 &-desc
@@ -3505,20 +3724,45 @@
                         color placeholderColor
                         font-family fontLight
                         margin-bottom 2px
+                        @media screen and (max-width: 767px)
+                            font-size 10px
         &-actions
             flex 0 0 235px
             background #f9f9f9
             padding 50px 20px
             transition all 0.2s ease
+            @media screen and (max-width: 1200px)
+                flex 0 0 180px
+                box-sizing border-box
+                .product-list-item_full
+                    padding-left 30px
+                    white-space nowrap
+                    @media screen and (max-width: 767px)
+                        justify-content flex-start
+            @media screen and (max-width: 767px)
+                flex 0 0 70px
+                padding 10px 5px
+                justify-content space-between
             .product-list-row-item:hover &
-                padding 60px 29px 60px 25px
+                @media screen and (min-width: 1200px)
+                    padding 60px 29px 60px 25px
             .product-list-item_price
                 color grayColor
                 font-size 20px 
                 font-family fontBold
                 margin 0 0 15px 20px
+                @media screen and (max-width: 1200px)
+                    margin-left 0
+                @media screen and (max-width: 767px)
+                    margin 0
+                    font-size 14px
             .product-list-item_compare
                 margin 0 0 15px 20px
+                @media screen and (max-width: 1200px)
+                    margin-left 0
+        .product-content-top-gallery_hit
+            @media screen and (max-width: 767px)
+                display none
 
 .catalog-filter-small
     @media screen and (min-width: 767px)
@@ -3537,6 +3781,8 @@
                 border 1px solid placeholderColor
                 font-size 12px
                 text-transform uppercase
+                .wishes-filter &
+                    flex 0 0 225px
                 &.active
                     color #df0c3e
                     .sprite-icon-cat-filter-but
@@ -3665,11 +3911,19 @@
     &_message
         width 100%
         flex 0 0 100px
-        background url(../img/order-ok-border.png) no-repeat
-        background-size contain
+        border 5px dashed yellowColor
         margin-bottom 35px
         font-size 16px
         color grayColor
+        text-align center
+        padding 0 50px
+        line-height 1.2
+        box-sizing border-box
+        @media screen and (max-width: 767px)
+            flex 0 0 130px
+            text-align left
+            padding 0 20px
+            border 4px dashed yellowColor
     &_link-front
         text-decoration none
         font-size 16px
@@ -3680,6 +3934,9 @@
     &-info
         width 680px
         position relative
+        @media screen and (max-width: 767px)
+            width auto
+            display block
         &:before,
         &:after
             position absolute
@@ -3690,10 +3947,15 @@
             content '“'
             left -40px
             top -60px
+            @media screen and (max-width: 767px)
+                left 0
         &:after
             content '”'
             right -40px
             bottom -15px
+            @media screen and (max-width: 767px)
+                right 0
+                bottom -30px
         &_quest
             font-size 16px
             color placeholderColor
@@ -3701,6 +3963,8 @@
             font-family fontBold
             font-style italic
             position relative
+            @media screen and (max-width: 767px)
+                margin 0 0 30px 40px
         &_text
             flex 0 0 540px
             font-size 16px

@@ -15,10 +15,215 @@
 	<script src="js/chosen.jquery.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/enquire.min.js"></script>
 	<script src="js/custom.js"></script>
 </head>
 <body>
 	<div class="layout-body">
+		<div class="dropdown-menu-small">
+			<div class="dropdown-menu-small-search animated fadeIn">
+				<form class="header-middle_search-form" action="#">
+					<input class="header-middle_search-form_field input-text" type="text" placeholder="Найти...">
+					<input class="header-middle_search-form_button" type="submit" value="">
+				</form>
+			</div>
+			<a href="#" class="dropdown-menu-small_section-link box-row align-center animated fadeIn js-small-menu-current-section-link"></a>
+			<div class="dropdown-menu-small_back box-row align-center animated fadeIn js-small-menu-section-back">
+				<i class="sprite-icon-section-menu-arrow-current"></i>
+				Назад
+			</div>
+			<div class="dropdown-menu-small-current-sections animated fadeIn slideInLeft js-small-menu-section-current-menu"></div>
+			<ul class="dropdown-menu-small-menu animated fadeIn slideInLeft">
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="dropdown-menu-small-menu-item_home box-row align-center space-between active">
+						<span class="box-row align-center">
+							<i class="sprite-icon-home-link"></i>
+							Главная
+						</span>
+						<i class="sprite-icon-section-menu-arrow"></i>
+					</a>
+				</li>
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="header-bottom_category-menu-dropdown_link link-1 js-small-menu-section-button">
+						Кухня
+					</a>
+					<nav class="dropdown-menu-small-menu-item-submenu box-col">
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Стулья для кухни
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Барные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Дизайнерские стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Складные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Штабелируемые стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Табуретки
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+					</nav>
+				</li>
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="header-bottom_category-menu-dropdown_link link-2 js-small-menu-section-button">
+						Гостинная
+					</a>
+					<nav class="dropdown-menu-small-menu-item-submenu box-col">
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Стулья для гостинной
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Барные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Дизайнерские стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+					</nav>
+				</li>
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="header-bottom_category-menu-dropdown_link link-3 js-small-menu-section-button">
+						Спальня
+					</a>
+					<nav class="dropdown-menu-small-menu-item-submenu box-col">
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Стулья для спальни
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+					</nav>
+				</li>
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="header-bottom_category-menu-dropdown_link link-4 js-small-menu-section-button">
+						Детская
+					</a>
+					<nav class="dropdown-menu-small-menu-item-submenu box-col">
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Стулья для детской
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Барные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Дизайнерские стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Складные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Штабелируемые стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Табуретки
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+					</nav>
+				</li>
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="header-bottom_category-menu-dropdown_link link-5 js-small-menu-section-button">
+						Офис
+					</a>
+					<nav class="dropdown-menu-small-menu-item-submenu box-col">
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Стулья для офиса
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Барные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Дизайнерские стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Складные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Штабелируемые стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Табуретки
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+					</nav>
+				</li>
+				<li class="dropdown-menu-small-menu-item box-col">
+					<a href="#" class="header-bottom_category-menu-dropdown_link link-6 js-small-menu-section-button">
+						Дача
+					</a>
+					<nav class="dropdown-menu-small-menu-item-submenu box-col">
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Стулья для дачи
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+						<a class="dropdown-menu-small-menu-item-submenu_link box-row align-center space-between" href="#">
+							Барные стулья
+							<i class="sprite-icon-section-menu-arrow"></i>
+						</a>
+					</nav>
+				</li>
+			</ul>
+			<nav class="dropdown-menu-small-links box-col">
+				<a href="#" class="dropdown-menu-small-links_link box-row align-center">
+					<span class="dropdown-menu-small-links_link_icon box-row space-center">
+						<i class="sprite-icon-login-reg"></i>
+					</span>
+					Вход / Регистрация
+				</a>	
+				<a href="#" class="dropdown-menu-small-links_link box-row align-center">
+					<span class="dropdown-menu-small-links_link_icon box-row space-center">
+						<i class="sprite-icon-wishes-link"></i>
+					</span>
+					Избранное
+				</a>
+				<a href="#" class="dropdown-menu-small-links_link box-row align-center">
+					<span class="dropdown-menu-small-links_link_icon box-row space-center">
+						<i class="sprite-icon-new-link"></i>
+					</span>
+					Идеи
+				</a>
+				<a href="#" class="dropdown-menu-small-links_link box-row align-center">
+					<span class="dropdown-menu-small-links_link_icon box-row space-center">
+						<i class="sprite-icon-help-link"></i>
+					</span>
+					Помощь по сервису
+				</a>
+				<a href="#" class="dropdown-menu-small-links_link box-row align-center">
+					<span class="dropdown-menu-small-links_link_icon box-row space-center">
+						<i class="sprite-icon-faq-link"></i>
+					</span>
+					FAQ
+				</a>
+				<a href="#" class="dropdown-menu-small-links_link box-row align-center space-between">
+					<span class="box-row align-center">
+						<span class="dropdown-menu-small-links_link_icon box-row space-center">
+							<i class="sprite-icon-short-link"></i>
+						</span>
+						Ярлык
+					</span>
+					<i class="sprite-icon-section-menu-arrow-current"></i>
+				</a>
+			</nav>
+		</div>
 		<div class="layout-wrapper">
 			<header class="layout-header">
 				<div class="header-top">
@@ -77,12 +282,20 @@
 									</div>
 								</div>
 							</div>
+							<div class="header-top-content-tell-small box-row align-center">
+								<i class="header-middle_tels-icon"></i>
+								<div class="header-middle_tels-num"></div>
+							</div>
+							<div class="header-top-content-call-button-small box-row align-center"></div>
 						</div>
 					</div>
 				</div>
 				<div class="header-middle">
 					<div class="content-center">
 						<div class="header-middle-content">
+							<div class="header-middle_smart-menu-button box-row align-center space-center">
+								<i class="sprite-icon-section-menu-but"></i>
+							</div>
 							<a class="header-middle_link" href=""><img src="img/logo.png" alt=""></a>
 							<div class="header-middle_search">
 								<div class="header-middle_search-cats">
@@ -105,7 +318,7 @@
 								<i class="header-middle_tels-icon"></i>
 								<div class="header-middle_tels-box">
 									<div class="header-middle_tels-num js-tels-but">(044) 123-45-67</div>
-									<a href="#" class="header-middle_tels-link">Перезвонить мне</a>
+									<a href="#" class="header-middle_tels-link js-call-but">Перезвонить мне</a>
 								</div>
 								<i class="header-middle_tels-arrow box-row space-center align-center js-tels-but"></i>
 								<div class="header-middle_tels-dropdown animated fadeIn js-tels-popup">
@@ -115,6 +328,7 @@
 								</div>
 							</div>
 							<nav class="header-middle_menu">
+								<i class="header-middle_menu-border"></i>
 								<a href="#" class="header-middle_menu-link link-1">Идеи</a>
 								<i class="header-middle_menu-border"></i>
 								<a href="#" class="header-middle_menu-link link-2">Избранное</a>
@@ -156,7 +370,10 @@
 									<a class="header-bottom_sections-menu-links_link" href="#">Мебель</a>
 									<a class="header-bottom_sections-menu-links_link" href="#">Домашний текстиль</a>
 									<a class="header-bottom_sections-menu-links_link" href="#">Интерьер</a>
-									<a class="header-bottom_sections-menu-links_link" href="#">Для ванной</a>
+									<a class="header-bottom_sections-menu-links_link" href="#">
+										<span class="header-bottom_sections-menu-links_link-new">new</span>
+										Для ванной
+									</a>
 									<a class="header-bottom_sections-menu-links_link" href="#">
 										<span class="header-bottom_sections-menu-links_link-new">new</span>
 										Освещение
@@ -168,6 +385,10 @@
 				</div>
 			</header>
 			<section class="layout-content">
+				<div class="section-drop-small box-row align-center">
+					<i class="section-drop-small_icon box-row align-center"></i>
+					каталог категорий
+				</div>
 				<div class="content-center">
 					<div class="breadcrumbs">
 						<div class="breadcrumbs-content">
@@ -327,6 +548,7 @@
 						</section>
 						<aside class="catalog-content-sidebar">
 							<div class="catalog-content-sidebar-filters sections-filters">
+								<i class="sprite-icon-popup-closed js-section-filters-small-button"></i>
 								<div class="catalog-content-sidebar-filters_panel">
 									<div class="catalog-content-sidebar-filters_title">Кухня</div>
 									<div class="catalog-content-sidebar-filters-list animated fadeIn">
@@ -415,20 +637,22 @@
 						</div>
 						<div class="footer-content_copy">Copyright Notice © 2010-2015 Companyname.com. All rights reserved</div>
 					</div>
-					<div class="footer-content-right">
-						<div class="footer-content-tels box-row space-between">
-							<div class="footer-content-tels-time">
-								<div class="footer-content-tels-time_label">звоните нам</div>
-								<div class="footer-content-tels-time_text">Пн-Пт 9:55 до 19:05</div>
+					<div class="footer-content-right box-col">
+						<div class="footer-content-contacts box-col">
+							<div class="footer-content-tels box-row space-between">
+								<div class="footer-content-tels-time">
+									<div class="footer-content-tels-time_label">звоните нам</div>
+									<div class="footer-content-tels-time_text">Пн-Пт 9:55 до 19:05</div>
+								</div>
+								<div class="footer-content-tels-nums">
+									<div class="footer-content-tels-nums_num">(044) 123-45-67</div>
+									<div class="footer-content-tels-nums_num">(067) 123-45-67</div>
+								</div>
 							</div>
-							<div class="footer-content-tels-nums">
-								<div class="footer-content-tels-nums_num">(044) 123-45-67</div>
-								<div class="footer-content-tels-nums_num">(067) 123-45-67</div>
+							<div class="footer-content-mail box-row space-between align-center">
+								<div class="footer-content-mail_label">пишите нам</div>
+								<a href="mailto:info@hatta.com.ua" class="footer-content-mail_link">info@hatta.com.ua</a>
 							</div>
-						</div>
-						<div class="footer-content-mail box-row space-between align-center">
-							<div class="footer-content-mail_label">пишите нам</div>
-							<a href="mailto:info@hatta.com.ua" class="footer-content-mail_link">info@hatta.com.ua</a>
 						</div>
 						<div class="footer-content-socials box-row space-end align-center">
 							<a target="_blank" href="#" class="footer-content-socials_link sprite-icon-social-fb"></a>
@@ -439,6 +663,20 @@
 				</div>
 			</div>
 		</footer>
+		<div class="call-popup animated fadeIn js-call-popup">
+			<div class="call-popup_title">Пожалуйста, оставьте контактную информацию</div>
+			<form class="call-popup-form" action="#">
+				<div class="call-popup-form-fields box-row space-between">
+					<input class="call-popup-form-fields_text input-text" type="text" placeholder="Ваше имя">
+					<input class="call-popup-form-fields_text input-text" type="text" placeholder="Номер телефона">
+				</div>
+				<textarea class="call-popup-form_textarea input-text" placeholder="Комментарий"></textarea>
+				<div class="call-popup-form-action box-row space-center">
+					<input class="call-popup-form-action_submit yellow-button" type="submit" value="Отправить">
+				</div>
+			</form>
+		</div>
+		<div class="snall-menu-overlay animated fadeIn"></div>
 	</div>
 </body>
 </html>
